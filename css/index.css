@@ -8,9 +8,21 @@
 }
 
 .bd {
+    background-color: black;
     background: url('../img/ryza.png') no-repeat center center/cover;
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1; /* これが重要や！ */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .bd::before {
@@ -18,11 +30,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 200vh;
-    height: 120vh;
-    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
-  }
+}
 
 .hero {
     margin-top: 20px;
@@ -68,11 +79,13 @@
 }
 
 .content-wrapper {
-    width: 100%;
-    display: flex;
+    background: black; /* 薄い黒色の背景を`content-wrapper`に設定 */
+    padding: 50px 0; /* 上下にある程度の余白を設ける */
+    min-height: calc(100vh - 86px - 44px); /* 画面の高さからヘッダーとフッターの高さを引いた分 */
+    /* ヘッダーの高さはpaddingで20px+20px+文字サイズ分くらい、footerの高さも適当に調整した方がいいかも */
+    display: flex; /* flexboxを使って中央揃えにする場合 */
     justify-content: center;
-    padding: 50px 0;
-    background: black;
+    align-items: flex-start; /* 上寄せにする */
 }
 
 .server-status {
@@ -91,4 +104,44 @@
 
 .server-status p {
     font-size: 20px;
+}
+
+
+
+.terms-of-service {
+    margin-top: 50px; /* 上部に少し余白を設ける */
+    margin-bottom: 50px; /* 下部にも余白を設ける */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 60%;
+    max-width: 800px; /* 幅を制限して読みやすくする */
+    margin-left: auto; /* 左右の余白を自動にして中央に */
+    margin-right: auto;
+    text-align: left;
+    color: white;
+}
+
+.terms-of-service h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms-of-service h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.terms-of-service p,
+.terms-of-service li {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.terms-of-service ul {
+    list-style-type: none;
+    /* リストのマークを消す */
+    padding-left: 0;
 }
