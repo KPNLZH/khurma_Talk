@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bd {
+    background: url('../img/ryza.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.bd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vh;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+  }
+
+.hero {
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.download {
+    background: #4da8ff;
+}
+
+.store {
+    background: #ffae42;
+}
+
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: black;
+}
+
+.server-status {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    color: white;
+}
+
+.server-status h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.server-status p {
+    font-size: 20px;
+}
